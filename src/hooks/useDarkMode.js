@@ -5,6 +5,7 @@ import {useLocalStorage} from './useLocalStorage.js';
 export const useDarkMode = (key,initialValue) => {
 
     //using dustin's setup, key must be specified, otherwise useLocalStorage sees key as undefined 
+    //test localstorage persistence. On page refresh, last toggled value persists.
     const [darkMode, setDarkMode] = useLocalStorage('darkMode', true);
 
     useEffect(() => {
